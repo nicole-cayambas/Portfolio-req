@@ -25,10 +25,14 @@ a {
 #navbar ul {
   display: flex;
   list-style-type: none;
+  justify-content: flex-end;
 }
 #navbar ul li {
   display: table;
-  width: 100%;
+  width: 20%;
+}
+#navbar ul li:hover {
+  background-color: #122336;
 }
 #navbar ul li a {
   color: white;
@@ -52,19 +56,42 @@ section:not(#header) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(236, 228, 192);
+  /* background-color: rgb(236, 228, 192); */
+  background-image: url("images/portfolio\ welcome\ side.png");
+  background-size: cover;
+  background-position: center bottom;
 }
 #welcome-section h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
+  color: #122336;
+  margin-top: 100px;
 }
 #welcome-section h5 {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-size: 1.5rem;
   text-align: center;
+  color: #122336;
+  margin-bottom: 40px;
+}
+#welcome-section img {
+  height: 300px;
+}
+#skills-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+#skills {
+  background-color: rgba(32, 24, 24, 0.692);
+  height: 30rem;
+  width: 40%;
+  margin-right: 3rem;
 }
 
 /*  PROJECTS SECTION */
@@ -73,45 +100,44 @@ section:not(#header) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: rgb(183, 204, 241);
   padding: 0 40px;
 }
-.project-card {
+.project-tile:not(#werds) {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   background-color: white;
   border-radius: 30px;
   margin: 20px;
   transition: 0.3s;
+  margin-bottom: 100px;
 }
-.project-card:hover {
+.project-tile:not(#werds):hover {
   box-shadow: 5px 5px 50px 10px #ffffff;
 }
-.project-card img {
+.project-tile img {
   width: 400px;
   height: 400px;
   object-fit: cover;
   border-radius: 30px;
   transition: 0.3s;
 }
-.project-card a {
+.project-tile a {
   width: 100%;
 }
-.project-card img:hover {
+.project-tile img:hover {
   width: 420px;
 }
 #werds {
+  margin: 80px;
   flex: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 #werds p {
   font-family: "Montserrat", sans-serif;
   font-size: 4rem;
   font-weight: bold;
-  margin: 0 20px;
 }
 .project-title {
   width: 100%;
@@ -129,11 +155,49 @@ section:not(#header) {
 /* CONTACT SECTION */
 
 #contact {
-  background-color: rgb(205, 255, 234);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#contact-header {
+  margin-top: 100px;
+  text-align: center;
+}
+#contact-header h2 {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+}
+#contact-header p {
+  font-family: "Montserrat", sans-serif;
+}
+#contact-links {
+  width: 100%;
+  margin-bottom: 100px;
+}
+#contact-links ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+#contact-links ul li {
+  width: 200px;
+  height: 10rem;
+}
+#contact-links img {
+  height: 82px;
+}
+#contact-links a {
+  font-family: "Montserrat", sans-serif;
+  color: #122336;
 }
 
 @media (max-width: 975px) {
-  .project-card img:hover {
+  .project-tile img:hover {
     width: 500px;
   }
 }
@@ -141,7 +205,7 @@ section:not(#header) {
   #projects {
     padding: 10px;
   }
-  .project-card img:hover {
+  .project-tile img:hover {
     width: 420px;
   }
 }
